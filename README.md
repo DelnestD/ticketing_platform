@@ -1,5 +1,19 @@
 # ticketing_platform
+
 just a ticket sales website project to practice
+
+## technology used
+
+1. frontend
+
+* Mustache
+* Tailwind
+
+2. backend
+
+* Node
+* TypeScript
+* MySQL
 
 ## exercice summary
 
