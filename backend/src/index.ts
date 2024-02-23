@@ -1,6 +1,6 @@
 import { DatabaseConnection } from "./database/connection";
 import { config } from "dotenv";
-// import { seeder } from "./core/database/seeder";
+import { seeder } from "./database/seeder";
 // import { initApi } from "./api";
 
 async function initApplication() {
@@ -16,7 +16,7 @@ async function initApplication() {
 
         await databaseInstance.dropDatabase();
         await databaseInstance.synchronize();
-        // await seeder();
+        await seeder();
     } else {
         await databaseInstance.synchronize();
     }
