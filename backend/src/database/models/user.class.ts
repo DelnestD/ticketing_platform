@@ -6,25 +6,43 @@ export class User {
     @PrimaryGeneratedColumn("uuid")
     public declare id: string;
 
-    @Column({
-        unique: true,
-    })
-    public declare username: string;
+    @Column()
+    public declare name: string;
 
     @Column({
         length: 32,
     })
     public declare firstName: string;
 
-    @Column({
-        length: 32,
-    })
-    public declare lastName: string;
+    @Column()
+    public declare email: string;
+
+    @Column()
+    public declare phone: string;
 
     @Column({
         length: 60,
     })
     public declare password: string;
+
+    @Column()
+    public declare street: string;
+
+    @Column({
+        length: 12,
+    })
+    public declare postalCode: string;
+
+    @Column()
+    public declare city: string;
+
+    @Column()
+    public declare country: string;
+
+    @Column({
+        type: "date",
+    })
+    public declare birthDate: Date;
 
     @Column({
         type: "enum",
