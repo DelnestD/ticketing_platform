@@ -51,6 +51,12 @@ export class User {
     public declare role: Role;
 
     @Column({
+        type: "boolean",
+        default: true,
+    })
+    public declare isActive: boolean;
+
+    @Column({
         type: "timestamp",
         default: () => "CURRENT_TIMESTAMP",
     })
